@@ -55,16 +55,14 @@ python convert_to_sc3gf1d.py gf_stores/regional_8hz_2500km output_sc3gf1d
 # - output_sc3gf1d.desc       (description file)
 ```
 
-### 5. Use in SeisComP
+### 5. Use in SeisComP (example)
 
 ```bash
 # Copy to SeisComP GF directory
 cp -r output_sc3gf1d/ $SEISCOMP_ROOT/share/greensfunctions/
 cp output_sc3gf1d.desc $SEISCOMP_ROOT/share/greensfunctions/
 
-# Configure scmtinv
-scconfig
-# Set: mtinv.greensFunctions = output_sc3gf1d
+# Configure scmtv or scautomt using scconfig
 ```
 
 ## File Descriptions
