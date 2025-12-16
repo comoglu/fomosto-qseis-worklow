@@ -1,0 +1,26 @@
+store_name: test_small_2hz
+earth_model: iasp91
+sample_rate: 2.0
+distance:
+  min: 10.0
+  max: 100.0
+  delta: 20.0
+depth:
+  min: 5.0
+  max: 25.0
+  delta: 10.0
+duration: auto
+time_start: -50.0
+receiver_depth: 0.0
+components: 10
+modelling_code: qseis.2006b
+qseis:
+  sw_algorithm: 0
+  sw_flat_earth_transform: 1
+  slowness_window:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  wavenumber_sampling: 2.5
+  aliasing_suppression: 0.1

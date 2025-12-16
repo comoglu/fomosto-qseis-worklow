@@ -1,0 +1,26 @@
+store_name: regional_8hz_2500km
+earth_model: iasp91
+sample_rate: 8.0
+distance:
+  min: 10.0
+  max: 2500.0
+  delta: 10.0
+depth:
+  min: 1.0
+  max: 50.0
+  delta: 1.0
+duration: auto
+time_start: -50.0
+receiver_depth: 0.0
+components: 10
+modelling_code: qseis.2006b
+qseis:
+  sw_algorithm: 0
+  sw_flat_earth_transform: 1
+  slowness_window:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  wavenumber_sampling: 2.5
+  aliasing_suppression: 0.1

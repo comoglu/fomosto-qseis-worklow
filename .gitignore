@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# GF stores (large binary files)
+gf_stores/
+*.traces
+*.index
+
+# Generated GF outputs
+seiscomp-gf/
+example_gfs/
+*.desc
+test_sc3gf1d/
+*sc3gf1d*/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
