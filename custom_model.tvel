@@ -1,0 +1,8 @@
+# Custom velocity model for regional events (including subduction zones)
+# Suitable for deeper events (e.g., Hellenic Arc)
+# Depth (km)  Vp (km/s)  Vs (km/s)  Density (g/cm³)  Qp    Qs
+0.00          4.50       2.60       2.20             600   300
+5.40          5.91       3.10       2.50             600   300
+31.6          7.80       4.50       3.10             1400  600
+89.2          8.30       4.80       3.40             1400  600
+150.0         8.50       4.90       3.50             1400  600

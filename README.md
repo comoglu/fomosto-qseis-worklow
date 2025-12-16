@@ -127,3 +127,48 @@ The conversion uses **1e15** scaling (line 462 in convert_to_sc3gf1d.py):
 
 **Version**: 1.0
 **Date**: 2025-12-17
+
+## Custom Velocity Model
+
+A custom 5-layer velocity model is included, suitable for **deeper events** (e.g., Subduction zones):
+
+```
+Depth (km)    Vp (km/s)    Vs (km/s)
+0.00          4.50         2.60
+5.40          5.91         3.10
+31.6          7.80         4.50
+89.2          8.30         4.80
+150.0         8.50         4.90
+```
+
+**Depth range:** 1-150 km (37,500 GFs)
+
+**To use:**
+
+```bash
+# Build with custom model
+./build_custom.sh
+
+# Or edit custom_8hz.yaml and build manually
+python fomosto_wrapper.py create custom_8hz.yaml
+python fomosto_wrapper.py build custom_8hz.yaml
+```
+
+**Create your own model:**
+
+Edit `custom_model.tvel`:
+```
+# Depth(km)  Vp(km/s)  Vs(km/s)  Density(g/cm³)  Qp    Qs
+0.00         4.50      2.60      2.20            600   300
+5.40         5.91      3.10      2.50            600   300
+150.0        8.50      4.90      3.50            1400  600
+```
+
+Then reference it in your YAML config:
+```yaml
+earth_model: custom_model.tvel
+depth:
+  min: 1.0
+  max: 150.0  # For subduction zone events
+  delta: 1.0
+```
